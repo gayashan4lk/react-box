@@ -8,15 +8,15 @@ import "./App.css";
 function App() {
   return (
     <EthProvider>
-      <div id="App" >
+      <div id="App">
         <div className="container">
-          <Intro />
+          {/* <Intro />
           <hr />
           <Setup />
-          <hr />
+          <hr /> */}
           <Demo />
-          <hr />
-          <Footer />
+          {/* <hr />
+          <Footer /> */}
         </div>
       </div>
     </EthProvider>

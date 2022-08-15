@@ -12,24 +12,27 @@ function Demo() {
   const { state } = useEth();
   const [value, setValue] = useState("?");
 
-  const demo =
+  const demo = (
     <>
-      <Cta />
+      {/* <Cta /> */}
       <div className="contract-container">
         <Contract value={value} />
         <ContractBtns setValue={setValue} />
       </div>
-      <Desc />
-    </>;
+      {/* <Desc /> */}
+    </>
+  );
 
   return (
     <div className="demo">
       <Title />
-      {
-        !state.artifact ? <NoticeNoArtifact /> :
-          !state.contract ? <NoticeWrongNetwork /> :
-            demo
-      }
+      {!state.artifact ? (
+        <NoticeNoArtifact />
+      ) : !state.contract ? (
+        <NoticeWrongNetwork />
+      ) : (
+        demo
+      )}
     </div>
   );
 }
